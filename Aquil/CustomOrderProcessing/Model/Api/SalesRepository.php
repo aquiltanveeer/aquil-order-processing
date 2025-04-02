@@ -32,7 +32,7 @@ class SalesRepository
 
             if(!$orderId) {
                 $response = ['success' => false, 'message' => "Order Id doesn't exist"];
-            } elseif($orderStatusCurrent == "ccComplete") {
+            } elseif($orderStatusCurrent == "Complete") {
                 $response = ['success' => false, 'message' => "Order Status already set to complete"];
             } else {            
                 $order->setStatus("complete");
