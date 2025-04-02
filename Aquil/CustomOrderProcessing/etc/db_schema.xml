@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="aquil_orders">
+        <column xsi:type="int" name="id" padding="10" identity="true" nullable="false" comment="ID" />
+        <column xsi:type="varchar" name="order_id" length="100" nullable="false" comment="order Id" />
+        <column xsi:type="varchar" name="old_status" length="100" nullable="false" comment="Old Status" />
+        <column xsi:type="varchar" name="new_status" length="100" nullable="false" comment="New Status" />
+        <column xsi:type="timestamp" name="created_datetime" nullable="false" default="CURRENT_TIMESTAMP" on_update="false" comment="Created Datetime"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id" />
+        </constraint>
+    </table>
+</schema>

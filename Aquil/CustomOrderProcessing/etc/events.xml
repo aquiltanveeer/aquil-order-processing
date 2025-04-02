@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *  @category  Orders Backoffice
+ *  @package   Aquil_CustomOrderProcessing
+ *  @author    Mohammad Aquil Tanveer
+ *  @copyright Copyright (c) 2025
+ *  @license   
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+
+    <event name="sales_order_save_after">
+        <observer instance="Aquil\CustomOrderProcessing\Observer\StoreOrderUpdate" name="store_order_fields_new_status"/>
+    </event>
+
+    <event name="sales_order_shipment_save_after">
+        <observer instance="Aquil\CustomOrderProcessing\Observer\SendShipmentMail" name="send_shipment_mail"/>
+    </event>
+    
+</config>

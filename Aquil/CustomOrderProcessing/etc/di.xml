@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *  @category  Orders Backoffice
+ *  @package   Aquil_CustomOrderProcessing
+ *  @author    Mohammad Aquil Tanveer
+ *  @copyright Copyright (c) 2025
+ *  @license   
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Aquil\CustomOrderProcessing\Api\SalesRepositoryInterface" 
+                type="Aquil\CustomOrderProcessing\Model\Api\SalesRepository"/>
+    <preference for="Aquil\CustomOrderProcessing\Api\SaveOrderRepositoryInterface"
+                type="Aquil\CustomOrderProcessing\Model\OrderRepositoryModel" />
+    <type name="Magento\Sales\Model\Order">
+        <plugin name="before_save_order_old_status" 
+            type="Aquil\CustomOrderProcessing\Plugin\OrderOldStatus" sortOrder="10" disabled="false"/>
+    </type>
+</config>

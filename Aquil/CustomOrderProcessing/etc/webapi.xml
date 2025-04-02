@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *  @category  Orders Backoffice
+ *  @package   Aquil_CustomOrderProcessing
+ *  @author    Mohammad Aquil Tanveer
+ *  @copyright Copyright (c) 2025
+ *  @license   
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../app/code/Magento/Webapi/etc/webapi.xsd">
+    <route method="POST" url="/V1/aquil-order/setStatus/">
+        <service class="Aquil\CustomOrderProcessing\Api\SalesRepositoryInterface" method="getPostIncrementId"/>
+        <resources>
+            <resource ref="Aquil_CustomOrderProcessing::order_set_status" />
+        </resources>
+    </route>
+</routes>

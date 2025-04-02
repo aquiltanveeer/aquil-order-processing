@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *  @category  Orders Backoffice
+ *  @package   Aquil_CustomOrderProcessing
+ *  @author    Mohammad Aquil Tanveer
+ *  @copyright Copyright (c) 2025
+ *  @license   
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Aquil_CustomOrderProcessing::sales" title="Custom Aquil API - Sales Order Status"
+                          translate="title" sortOrder="110">
+                    <resource id="Aquil_CustomOrderProcessing::order_set_status" title="update order status"
+                              translate="title" sortOrder="20" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

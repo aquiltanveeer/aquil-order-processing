@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *  @category  Orders Backoffice
+ *  @package   Aquil_CustomOrderProcessing
+ *  @author    Mohammad Aquil Tanveer
+ *  @copyright Copyright (c) 2025
+ *  @license   
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Aquil_CustomOrderProcessing" setup_version="1.0.0">
+     <sequence>
+            <module name="Magento_Webapi" />
+            <module name="Magento_Sales" />
+     </sequence>
+    </module>
+</config>
