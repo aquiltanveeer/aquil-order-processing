@@ -10,14 +10,17 @@ class SalesRepository
 {
     protected $logger;
     protected $order;
+    protected $cache;
 
     public function __construct(
         LoggerInterface $logger,
-        \Magento\Sales\Api\Data\OrderInterface $order
+        \Magento\Sales\Api\Data\OrderInterface $order,
+        \Magento\Framework\App\CacheInterface $cache
     )
     {
         $this->order = $order;
         $this->logger = $logger;
+        $this->cache = $cache;
     }
 
     /**
@@ -26,6 +29,10 @@ class SalesRepository
     public function getPostIncrementId($incrementId,$orderStatus)
     {
         try {
+            $cacheData = $this->cache->load('sales_repo_custom_orderprocess');
+            if ($cacheData) {
+                return json_decode($cacheData, true);
+            }
             $response = ['success' => false];
             $order = $this->order->loadByIncrementId($incrementId);
             $orderStatusCurrent = $order->getStatusLabel();
@@ -51,6 +58,8 @@ class SalesRepository
             $this->messageManager->addErrorMessage($e->getMessage());
         } 
         $returnArray = json_encode($response);
+        $this->cache->save($returnArray,"sales_repo_custom_orderprocess", ["sales_repo_custom_api_cache_tag"], 82000);
+        sleep(2);
         return $returnArray; 
     }
 
