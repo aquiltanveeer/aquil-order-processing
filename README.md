@@ -48,4 +48,14 @@ Following layout and Ui components have been added
 app/code/Aquil/CustomOrderProcessing/view/adminhtml/layout/aquil_custom_orders_customorders.xml
 app/code/Aquil/CustomOrderProcessing/view/adminhtml/ui_component/aquil_order_listing.xml
 
+## Security.
+Additional Data validations can be added to the API's. Accepting only specific type of data. To avoid any kind of SQL injections.
+
+## Performance Optimizations
+As discussed earlier caching the responses can improve the api performance with regards response times.
+However the task doesn't cover any frontend html,css,js. 
+Caching techniques like Redis, Varnish, Opcache, Fastly CDN can improve the performance of application.
+
+
+
 
