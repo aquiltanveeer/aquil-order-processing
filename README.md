@@ -25,7 +25,7 @@ https://imgur.com/qRYapwg.png
 
 # Comments/Updates/Fixes
 
-## test case updates
+## Test case updates
 For Demonstration a test case has been added for the Model SalesRepository in the following path
 Aquil/CustomOrderProcessing/Test/Unit/Model/SalesRepositoryTest.php
 
