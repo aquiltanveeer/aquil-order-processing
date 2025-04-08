@@ -17,4 +17,17 @@
         <plugin name="before_save_order_old_status" 
             type="Aquil\CustomOrderProcessing\Plugin\OrderOldStatus" sortOrder="10" disabled="false"/>
     </type>
+      <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="aquil_custom_order_listing_data_source" xsi:type="string">Aquil\CustomOrderProcessing\Model\ResourceModel\Order\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Aquil\CustomOrderProcessing\Model\ResourceModel\Order\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">aquil_orders</argument>
+            <argument name="resourceModel" xsi:type="string">Aquil\CustomOrderProcessing\Model\ResourceModel\Order</argument>
+        </arguments>
+    </virtualType>
 </config>
