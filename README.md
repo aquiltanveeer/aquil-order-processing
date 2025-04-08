@@ -33,5 +33,9 @@ Aquil/CustomOrderProcessing/Test/Unit/Model/SalesRepositoryTest.php
 For Demonstration addional exceptional handling has been added to SalesRepository Model
 Aquil/CustomOrderProcessing/Model/Api/SalesRepository.php
 
+## Caching concept for APi
+Considering we have Redis enabled and The api response we have implemented can be cached.
+with the help of Magento\Framework\App\CacheInterface and has been implemented on the following API response which can give faster response on the second hit.
+Caching file Path - app/code/Aquil/CustomOrderProcessing/Model/Api/SalesRepository.php
 
 
