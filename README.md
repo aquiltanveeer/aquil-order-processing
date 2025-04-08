@@ -38,4 +38,14 @@ Considering we have Redis enabled and The api response we have implemented can b
 with the help of Magento\Framework\App\CacheInterface and has been implemented on the following API response which can give faster response on the second hit.
 Caching file Path - app/code/Aquil/CustomOrderProcessing/Model/Api/SalesRepository.php
 
+## Admin UI
+This feature is not tested currently local admin is crashed. 
+Magento Admin route have been added - app/code/Aquil/CustomOrderProcessing/etc/adminhtml/routes.xml
+The controller path- aquil_custom/orders/customorders
+To render the Page the controlller has been created -app/code/Aquil/CustomOrderProcessing/Controller/Adminhtml/Orders/CustomOrders.php
+No menu.xml has been given, can be added later too.
+Following layout and Ui components have been added
+app/code/Aquil/CustomOrderProcessing/view/adminhtml/layout/aquil_custom_orders_customorders.xml
+app/code/Aquil/CustomOrderProcessing/view/adminhtml/ui_component/aquil_order_listing.xml
+
 
