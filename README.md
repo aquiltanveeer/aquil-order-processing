@@ -23,12 +23,15 @@ Screenshot - https://prnt.sc/00oUhnMXALuo
 ### Database table Screenshot
 https://imgur.com/qRYapwg.png
 
-## Comments/Updates/Fixes
+# Comments/Updates/Fixes
 
+## test case updates
 For Demonstration a test case has been added for the Model SalesRepository in the following path
 Aquil/CustomOrderProcessing/Test/Unit/Model/SalesRepositoryTest.php
 
-
+## Exception handling
+For Demonstration addional exceptional handling has been added to SalesRepository Model
+Aquil/CustomOrderProcessing/Model/Api/SalesRepository.php
 
 
 
